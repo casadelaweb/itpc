@@ -1,6 +1,4 @@
-# Фронтенд для mokko-brand.ru WIP
-
-Тест: https://mokko.ninthtown.ru/
+# itpc
 
 ## Общая информация
 

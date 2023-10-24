@@ -1,8 +1,9 @@
 {
   "name": "itpc",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "itpc",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "open": "start dist/index.html",
     "start": "webpack serve --node-env=development --progress",
@@ -43,6 +44,7 @@
     "body-scroll-lock": "^4.0.0-beta.0",
     "imask": "^7.0.1",
     "restyle.css": "^1.0.8",
-    "swiper": "^10.3.0",
-  }
+    "swiper": "^10.3.0"
+  },
+  "git": "https://github.com/casadelaweb/itpc"
 }

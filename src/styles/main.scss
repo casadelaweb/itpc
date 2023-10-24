@@ -2,7 +2,7 @@
 @import 'src/styles/ui';
 
 :root {
-  --headerHeight: $headerInititalHeight;
+  --headerHeight: $headerInitialHeight;
   --scrollbarWidth: 17px;
 }
 
@@ -15,27 +15,12 @@ html, body, #app {
 }
 
 body {
-  color: #80756e;
+  color: white;
+  background: white;
 }
 
 .container {
   @include container;
-}
-
-hr {
-  margin: 20px 0;
-}
-
-.form {
-  &-warning {
-    a {
-      text-decoration: underline;
-    }
-  }
-}
-
-.swiper-button-prev, .swiper-button-next {
-  @include flex(center, center);
 }
 
 .main {
@@ -52,8 +37,4 @@ input, textarea {
     color: mediumseagreen;
     border-color: mediumseagreen;
   }
-}
-
-.button-appointment {
-  @include buttonAppointment;
 }

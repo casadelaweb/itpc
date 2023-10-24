@@ -1,67 +1,25 @@
 @import 'src/styles/variables';
 
-@mixin mediaOnlyMobile {
-  @media (max-width: $breakpointTablet - 1px) {
-    @content;
-  }
-}
-
-@mixin mediaMobileConventional {
-  @media (min-width: $breakpointMobileConventional) {
-    @content;
-  }
-}
-
-@mixin mediaMobileBg {
-  @media (min-width: $breakpointMobileBg) {
-    @content;
-  }
-}
-
 @mixin mediaTablet {
-  @media (min-width: $breakpointTablet) {
-    @content;
-  }
-}
-
-@mixin mediaOnlyTablet {
-  @media (min-width: $breakpointTablet) and (max-width: $breakpointTabletBg - 1px) {
+  @media (min-width: 768px) {
     @content;
   }
 }
 
 @mixin mediaTabletBg {
-  @media (min-width: $breakpointTabletBg) {
-    @content;
-  }
-}
-
-@mixin mediaOnlyTabletBg {
-  @media (min-width: $breakpointTabletBg) and (max-width: $breakpointLaptop - 1px) {
-    @content;
-  }
-}
-
-@mixin mediaOnlyTablets {
-  @media (min-width: $breakpointTablet) and (max-width: $breakpointLaptop - 1px) {
-    @content;
-  }
-}
-
-@mixin mediaOnlyMobileAndAllTablets {
-  @media (max-width: $breakpointLaptop - 1px) {
+  @media (min-width: 1024px) {
     @content;
   }
 }
 
 @mixin mediaLaptop {
-  @media (min-width: $breakpointLaptop) {
+  @media (min-width: 1440px) {
     @content;
   }
 }
 
 @mixin mediaDesktop {
-  @media (min-width: $breakpointDesktop) {
+  @media (min-width: 1920px) {
     @content;
   }
 }
