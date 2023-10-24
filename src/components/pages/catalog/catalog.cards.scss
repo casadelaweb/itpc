@@ -1,0 +1,372 @@
+@use 'src/styles/shared' as *;
+
+$columnGapMobile: 8px;
+$columnGapTablet: 14px;
+
+:root {
+  --catalogHeaderHeight: 320px;
+}
+
+.catalog {
+  &-main {
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+
+  &-header {
+    &-button {
+      &._change-layout {
+        transition: opacity 0.25s, color 0.25s;
+        opacity: 0.5;
+
+        &:active {
+          color: #51504f;
+        }
+
+        &.active {
+          opacity: 1;
+        }
+
+        ._mobile, ._tablet, ._tabletBg {
+          display: none;
+        }
+
+        ._mobile {
+          @include mediaOnlyMobile {
+            display: inline-block;
+          }
+        }
+
+        ._tablet {
+          @include mediaOnlyTablet {
+            display: inline-block;
+          }
+        }
+
+        ._tabletBg {
+          @include mediaTabletBg {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.catalog-cards {
+  @include flex($w: wrap);
+  position: relative;
+  z-index: 0;
+  min-width: 0;
+  margin: 0 ($columnGapMobile * 0.5 * -1) 48px;
+  @include mediaTablet {
+    margin-right: ($columnGapTablet * 0.5 * -1);
+    margin-left: ($columnGapTablet * 0.5 * -1);
+  }
+  @include mediaLaptop {
+    margin-bottom: 72px;
+  }
+
+  &-loading {
+    content: ' ';
+    position: absolute;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(white, 0.5) no-repeat center center;
+    background-size: contain;
+  }
+}
+
+.catalog-card {
+  @include flex($d: column);
+  position: relative;
+  z-index: 0;
+  flex: 0 0 auto;
+  width: calc(100% / 2 - $columnGapMobile);
+  min-width: 0;
+  margin: 0 ($columnGapMobile * 0.5) 20px;
+  @include mediaTablet {
+    width: calc(100% / 3 - $columnGapTablet);
+    margin-right: $columnGapTablet * 0.5;
+    margin-bottom: 36px;
+    margin-left: $columnGapTablet * 0.5;
+  }
+  @include mediaTabletBg {
+    width: calc(100% / 4 - $columnGapTablet);
+  }
+
+  &._disabled {
+    .catalog-card-slider {
+      opacity: 0.5;
+    }
+
+    .catalog-card-preview {
+      cursor: not-allowed;
+      // pointer-events: none;
+    }
+  }
+
+  &-discount, &-favourite {
+    position: absolute;
+    z-index: 2;
+  }
+
+  &-discount {
+    font-size: 10px;
+    top: 0;
+    left: 0;
+    padding: 8px 4px;
+    color: white;
+    border-radius: 12px 0 12px 0;
+    background: #766cff;
+    @include mediaLaptop {
+      font-size: 15px;
+      padding: 12px 8px;
+    }
+  }
+
+  &-favourite {
+    @include flex(center, center);
+    font-size: 16px;
+    top: 5px;
+    right: 8px;
+    opacity: 0.9;
+    color: white;
+    @include mediaTablet {
+      font-size: 20px;
+      top: 8px;
+    }
+  }
+
+  &-preview {
+    font-size: 16px;
+    position: absolute;
+    z-index: 2;
+    top: 16px + 5px + 8px;
+    right: 8px;
+    opacity: 0.9;
+    color: white;
+    @include mediaTablet {
+      font-size: 20px;
+      top: 20px + 8px + 8px;
+    }
+  }
+
+  &-slider {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    min-width: 0;
+    max-width: 100%;
+    margin-bottom: 4px;
+    border-radius: 12px;
+    @include mediaTablet {
+      margin-bottom: 8px;
+    }
+    @include mediaLaptop {
+      margin-bottom: 12px;
+    }
+  }
+
+  &-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 9 / 13.5;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &-sizes {
+    @include flex(center);
+    font-size: 10px;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    transition: transform 0.5s;
+    transform: translate(0, 125%);
+    pointer-events: none;
+    background: rgba(white, 0.75);
+    @include mediaLaptop {
+      font-size: 14px;
+      padding: 20px 14px;
+    }
+    @include mediaDesktop {
+      font-size: 15px;
+    }
+
+    &.active {
+      transform: none;
+      pointer-events: auto;
+    }
+  }
+
+  &-size {
+    flex: 0 0 auto;
+    margin-right: 0.5em;
+  }
+
+  &-cart {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+  }
+
+  &-title {
+    @include lineClamp(3);
+    font-size: 12px;
+    margin-bottom: 0.5em;
+
+    @include mediaTabletBg {
+      font-size: 15px;
+    }
+  }
+
+  &-price {
+    @include flex(center);
+    font-size: 14px;
+    // margin-top: auto;
+    margin-bottom: 0.6em;
+    @include mediaTabletBg {
+      font-size: 17px;
+    }
+
+    &-previous {
+      text-decoration: line-through;
+      margin-right: 1em;
+    }
+
+    &-current {
+      color: #e71c35;
+    }
+  }
+
+  &-colors {
+    @include flex(center);
+  }
+
+  &-color {
+    flex: 0 0 auto;
+    width: 14px;
+    height: 14px;
+    margin-right: 0.5em;
+    border-radius: 50%;
+  }
+
+  .swiper {
+    &-button {
+      &-prev, &-next {
+        display: none;
+        flex: 0 0 auto;
+        transition: transform 0.5s;
+        pointer-events: none;
+        @include mediaTabletBg {
+          @include flex(center, center);
+        }
+
+        &.active {
+          transform: translate(0, -50%);
+          pointer-events: auto;
+        }
+      }
+
+      &-prev {
+        transform: translate(-100px, -50%);
+      }
+
+      &-next {
+        transform: translate(100px, -50%);
+      }
+    }
+
+    &-pagination {
+      bottom: 10px;
+      @include mediaLaptop {
+        bottom: 16px;
+      }
+
+      &-bullet {
+        width: 16px;
+        margin: 0 0.25em;
+        @include mediaTablet {
+          width: 24px;
+        }
+      }
+    }
+  }
+}
+
+// отображение карточки в подробном режиме
+.mode-enlarged.catalog-card {
+  width: calc(100% - $columnGapMobile);
+  @include mediaTablet {
+    width: calc(100% / 2 - $columnGapTablet);
+  }
+  @include mediaTabletBg {
+    width: calc(100% / 3 - $columnGapTablet);
+  }
+
+  .catalog-card {
+    &-discount {
+      font-size: 15px;
+      padding: 12px 8px;
+    }
+
+    &-preview {
+      font-size: 20px;
+      top: 20px + 5px + 12px;
+      right: 12px;
+      @include mediaTablet {
+        font-size: 24px;
+        top: 24px + 8px + 12px;
+      }
+    }
+
+    &-favourite {
+      font-size: 20px;
+      right: 12px;
+      @include mediaTablet {
+        font-size: 24px;
+      }
+    }
+
+    &-cart {
+      width: 22px;
+      height: 22px;
+    }
+
+    &-title {
+      @include mediaDesktop {
+        font-size: 18px;
+      }
+    }
+
+    &-sizes {
+      font-size: 14px;
+      padding: 20px 14px;
+    }
+
+    &-price {
+      @include mediaDesktop {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .swiper {
+    &-pagination {
+      &-bullet {
+        width: 32px;
+        @include mediaTablet {
+          width: 40px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@use 'src/styles/shared' as *;
+@import 'src/styles/ui';
+
+:root {
+  --headerHeight: $headerInititalHeight;
+  --scrollbarWidth: 17px;
+}
+
+html {
+  @include scrollbar;
+}
+
+html, body, #app {
+  @include flex($d: column);
+}
+
+body {
+  color: #80756e;
+}
+
+.container {
+  @include container;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+.form {
+  &-warning {
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.swiper-button-prev, .swiper-button-next {
+  @include flex(center, center);
+}
+
+.main {
+  padding-top: var(--headerHeight);
+}
+
+input, textarea {
+  &.error {
+    color: #e71c35;
+    border-color: #e71c35;
+  }
+
+  &.success {
+    color: mediumseagreen;
+    border-color: mediumseagreen;
+  }
+}
+
+.button-appointment {
+  @include buttonAppointment;
+}

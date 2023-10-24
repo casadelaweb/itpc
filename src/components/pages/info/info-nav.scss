@@ -1,0 +1,105 @@
+@use 'src/styles/shared' as *;
+
+.info-nav {
+  position: sticky;
+  z-index: 100;
+  top: var(--headerHeight);
+  margin: 0 calc($containerPaddingMobile * -1);
+  padding: $containerPaddingMobile;
+  background: white;
+  @include mediaTablet {
+    margin: 0 calc($containerPaddingTablet * -1);
+    padding: $containerPaddingMobile $containerPaddingTablet;
+  }
+  @include mediaLaptop {
+    z-index: 1;
+    top: calc(var(--headerHeight) + 20px);
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-header {
+    @include flex(center);
+    width: fit-content;
+  }
+
+  &-title {
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    @include mediaTablet {
+      font-size: 16px;
+    }
+    @include mediaLaptop {
+      font-size: 17px;
+      margin-bottom: 22px;
+    }
+  }
+
+  &-button {
+    @include flex(center, center);
+    font-size: 14px;
+    margin: 0 0.5em;
+    transition: transform 0.5s;
+    transform-origin: center;
+    color: #80756e;
+    @include mediaLaptop {
+      display: none;
+    }
+
+    &.active {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &-list {
+    @include flex($d: column);
+    width: 100%;
+    background: white;
+    @include mediaOnlyMobileAndAllTablets {
+      position: absolute;
+      z-index: -1;
+      top: 100%;
+      left: 0;
+      overflow: hidden;
+      transition: transform 0.5s;
+      transform: translate(-100%, 0);
+      pointer-events: none;
+    }
+
+    &.active {
+      z-index: 2;
+      transform: none;
+      pointer-events: auto;
+    }
+  }
+
+  &-item {
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    flex: 0 0 auto;
+    padding: 10px $containerPaddingMobile;
+    transition: background-color 0.5s, color 0.5s;
+    @include mediaTablet {
+      padding: $containerPaddingMobile $containerPaddingTablet;
+    }
+    @include mediaLaptop {
+      font-size: 15px;
+      margin: 0 0 0.75em;
+      padding: 0;
+    }
+
+    &.active, &:hover {
+      color: #505050;
+      @include mediaOnlyMobileAndAllTablets {
+        background: #f1f1f1;
+      }
+    }
+  }
+
+  &-overlay {
+    @include overlay;
+    z-index: 98;
+  }
+}
