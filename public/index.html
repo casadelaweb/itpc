@@ -16,8 +16,55 @@
 </head>
 <body>
 <div id="app">
-  <header class="header"></header>
-  <main id="main">Hello WOrld!@ fgfgf</main>
+  <header class="header">
+    <div class="container">
+      <div class="header__wrap">
+        <img src="src/assets/img/logo-header.png" alt="logo" class="header__logo">
+        <div class="header__menu">
+          <a href="#">About</a>
+          <a href="#">Distributions</a>
+          <a href="#">Locations</a>
+          <a href="#">Industry</a>
+          <a href="#">Contacts</a>
+        </div>
+        <button type="button" class="btn btn--outline">Get Feedback</button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="intro">
+      <div class="container">
+        <h1 class="heading">YOUR KEY PARTNER <br> IN CIS IT MARKET</h1>
+        <form class="intro__form">
+          <input class="intro__input" type="text" name="name" id="name" placeholder="Your Name" required>
+          <input class="intro__input" type="tel" name="tel" placeholder="+7 (XXX) XXX XX-XX" required>
+          <button type="submit" class="btn btn--solid">Order a Consultation</button>
+        </form>
+      </div>
+    </section>
+    <section class="company">
+      <div class="container">
+        <h2 class="title">FULL-CYCLE IT COMPANY</h2>
+        <div class="company__wrap">
+          <div class="company__item">
+            <div class="company__count">01</div>
+            <div class="company__txt">Competences</div>
+            <a href="#" class="btn btn--solid company__link">Learn More</a>
+          </div>
+          <div class="company__item">
+            <div class="company__count">02</div>
+            <div class="company__txt">Enterprise Platform</div>
+            <a href="#" class="btn btn--solid company__link">Learn More</a>
+          </div>
+          <div class="company__item">
+            <div class="company__count">03</div>
+            <div class="company__txt">Sales Channels</div>
+            <a href="#" class="btn btn--solid company__link">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   <footer class="footer"></footer>
 </div>
 </body>

@@ -1,0 +1,45 @@
+@import 'src/styles/shared';
+.intro {
+  background-image: url('src/assets/img/bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 270px 0;
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: linear-gradient(0deg, #03001B 3.04%, rgba(3, 0, 27, 0.00) 46.17%);     
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 50px;
+  }
+  &__input{
+    margin-right: 30px;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.10);    
+    background: rgba(255, 255, 255, 0.06);    
+    backdrop-filter: blur(22px);
+    padding: 25px 29px;
+    color: #ffffff;
+    &::placeholder{
+      color: rgba(255, 255, 255, 0.25);
+    }
+  }
+}
+
+
+
