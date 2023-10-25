@@ -5,11 +5,11 @@
   padding: 203px 0;
   background: url('src/assets/img/screen1.png') no-repeat center;
   background-size: cover;
-  @include mediaMobile {
+  @media screen and (min-width: 768px) {
     background: url('src/assets/img/screen1-1440.png') no-repeat center;
     background-size: cover;
   }
-  @include mediaLaptop {
+  @media screen and (min-width: 1440px) {
     padding: 270px 0;
   }
 
@@ -18,10 +18,10 @@
     align-items: center;
     flex-wrap: wrap;
     margin-top: 30px;
-    @include mediaMobile {
+    @media screen and (min-width: 768px) {
       justify-content: space-between;
     }
-    @include mediaTablet {
+    @media screen and (min-width: 1024px) {
       justify-content: flex-start;
     }
   }
@@ -44,11 +44,11 @@
       color: rgba(255, 255, 255, 0.25);
     }
 
-    @include mediaMobile {
+    @media screen and (min-width: 768px) {
       width: 30%;
       margin-bottom: 0;
     }
-    @include mediaTablet {
+    @media screen and (min-width: 1024px) {
       font-size: 18px;
       width: 250px;
       margin-right: 30px;
@@ -57,10 +57,10 @@
 
   &__submit {
     width: 100%;
-    @include mediaMobile {
+    @media screen and (min-width: 768px) {
       width: 30%;
     }
-    @include mediaTablet {
+    @media screen and (min-width: 1024px) {
       font-size: 18px;
       width: 234px;
     }

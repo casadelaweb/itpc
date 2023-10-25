@@ -9,7 +9,7 @@
   font-size: 42px;
   font-weight: 700;
   line-height: 100%;
-  @include mediaTablet {
+  @media screen and (min-width: 1024px) {
     font-size: 80px;
     max-width: 730px;
   }
@@ -19,7 +19,7 @@
   font-size: 42px;
   font-weight: 700;
   line-height: 100%;
-  @include mediaTablet {
+  @media screen and (min-width: 1024px) {
     font-size: 64px;
   }
 }
@@ -62,7 +62,7 @@
   width: 28px;
   height: 28px;
   background: url('src/assets/img/burger.svg') no-repeat center;
-  @include mediaMobile {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 }
@@ -85,11 +85,11 @@
 
   &__menu {
     display: none;
-    @include mediaMobile {
+    @media screen and (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
     }
-    @include mediaTablet {
+    @media screen and (min-width: 1024px) {
       margin-left: auto;
     }
 
@@ -112,10 +112,10 @@
     margin-right: 20px;
     margin-left: auto;
     padding: 14px 18px;
-    @include mediaMobile {
+    @media screen and (min-width: 768px) {
       margin: 0;
     }
-    @include mediaTablet {
+    @media screen and (min-width: 1024px) {
       margin-left: 45px;
     }
   }

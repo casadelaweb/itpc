@@ -4,19 +4,19 @@
   padding: 64px 0;
   background: url('src/assets/img/screen2.png') no-repeat center;
   background-size: cover;
-  @include mediaTablet {
+  @media screen and (min-width: 1024px) {
     padding: 221px 0;
   }
 
   &__wrap {
     margin-top: 30px;
-    @include mediaMobile {
+    @media screen and (min-width: 768px) {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       justify-content: space-between;
     }
-    @include mediaTablet {
+    @media screen and (min-width: 1024px) {
       margin-top: 50px;
     }
   }
@@ -28,11 +28,11 @@
     border-radius: 20px 20px 20px 0px;
     background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(22px);
-    @include mediaMobile {
+    @media screen and (min-width: 768px) {
       width: 30%;
       margin-bottom: 0;
     }
-    @include mediaTablet {
+    @media screen and (min-width: 1024px) {
       width: 31.7%;
       height: 244px;
       padding: 40px 10px 40px 30px;
@@ -48,7 +48,7 @@
     display: inline-block;
     padding-right: 20px;
     color: #a6a7f7;
-    @include mediaMobile {
+    @media screen and (min-width: 768px) {
       display: block;
       margin-bottom: 10px;
     }
@@ -61,7 +61,7 @@
     vertical-align: middle;
     display: inline-block;
     color: #ffffff;
-    @include mediaMobile {
+    @media screen and (min-width: 768px) {
       display: block;
     }
 
@@ -76,7 +76,7 @@
     width: 106px;
     margin-top: 20px;
     padding: 13px 0;
-    @include mediaTablet {
+    @media screen and (min-width: 1024px) {
       font-size: 18px;
       width: 125px;
       margin-top: 30px;

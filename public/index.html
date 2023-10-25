@@ -39,13 +39,11 @@
       <div class="container">
         <h1 class="heading">YOUR KEY PARTNER IN CIS IT MARKET</h1>
         <form class="intro__form">
-          <label>
-            <input autocomplete="off" class="intro__input" name="name" placeholder="Your Name" required type="text">
-          </label>
-          <label>
-            <input autocomplete="off" class="intro__input" data-mask="tel" name="tel" placeholder="+7 (XXX) XXX XX-XX"
-                   required type="tel">
-          </label>
+          <!-- todo: w3c валидация - input должен быть обернут в label -->
+          <input autocomplete="off" class="intro__input" name="name" placeholder="Your Name" required type="text">
+          <!-- todo: w3c валидация - input должен быть обернут в label -->
+          <input autocomplete="off" class="intro__input" data-mask="tel" name="tel" placeholder="+7 (XXX) XXX XX-XX"
+                 required type="tel">
           <button class="btn--solid intro__submit" title="Order a Consultation" type="submit">
             <span>Order a Consultation</span>
           </button>
