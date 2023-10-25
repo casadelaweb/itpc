@@ -1,65 +1,80 @@
 @import 'src/styles/shared';
+
 .facts {
+  padding: 143px 0;
   background: url('src/assets/img/screen3.png') no-repeat center;
   background-size: cover;
-  padding: 143px 0;
   @include mediaTablet {
+    padding: 153px 0;
     background: url('src/assets/img/screen3-1440.png') no-repeat center;
     background-size: cover;
-    padding: 153px 0;
   }
-  &__container{
+
+  &__container {
+    overflow-x: auto;
+    height: 400px;
     margin-top: 30px;
     margin-right: -20px;
     margin-left: -10px;
     padding-left: 10px;
-    overflow-x: auto;
-    height: 400px;
   }
+
   &__container::-webkit-scrollbar {
     display: none;
   }
-  &__line{
+
+  &__line {
+    position: relative;
     display: block;
-    margin-top: 199px;
     width: 1186px;
     height: 1px;
+    margin-top: 199px;
     background: rgba(255, 255, 255, 0.5);
-    position: relative;
   }
-  &__item{
-    position: absolute;    
-    &:nth-child(1){
+
+  &__item {
+    position: absolute;
+
+    &:nth-child(1) {
       left: 0;
     }
+
     &:nth-child(2) {
       left: 136px;
     }
+
     &:nth-child(3) {
       left: 286px;
     }
+
     &:nth-child(4) {
       left: 436px;
     }
+
     &:nth-child(5) {
       left: 586px;
     }
+
     &:nth-child(6) {
       left: 736px;
     }
+
     &:nth-child(7) {
       left: 886px;
     }
+
     &:nth-child(8) {
       left: 1036px;
     }
   }
-  &__item.top{
+
+  &__item.top {
     bottom: 0;
     padding-bottom: 57px;
+
     &::after {
-      position: absolute;
       content: '';
+      position: absolute;
       bottom: -7px;
       left: -7px;
       width: 14px;
@@ -67,9 +82,10 @@
       border: 3px solid #ffffff;
       border-radius: 50%;
     }
+
     &::before {
-      position: absolute;
       content: '';
+      position: absolute;
       bottom: 4px;
       left: 0px;
       width: 1px;
@@ -77,12 +93,14 @@
       background: url('src/assets/img/arr.png') no-repeat center;
     }
   }
+
   &__item.bottom {
     top: 0;
     padding-top: 57px;
+
     &::after {
-      position: absolute;
       content: '';
+      position: absolute;
       top: -7px;
       left: -7px;
       width: 14px;
@@ -90,9 +108,10 @@
       border: 3px solid #ffffff;
       border-radius: 50%;
     }
+
     &::before {
-      position: absolute;
       content: '';
+      position: absolute;
       top: 4px;
       left: 0px;
       width: 1px;
@@ -101,26 +120,30 @@
       background: url('src/assets/img/arr.png') no-repeat center;
     }
   }
-  &__year{
-    color: #A6A7F7;    
+
+  &__year {
     font-size: 32px;
     font-weight: 700;
-    line-height: 100%;    
+    line-height: 100%;
+    color: #a6a7f7;
   }
-  &__txt{
-    color: #FFF;    
+
+  &__txt {
     font-size: 14px;
     line-height: 14px;
     margin-top: 5px;
-    span{
+    color: #ffffff;
+
+    span {
       font-size: 24px;
       font-weight: 700;
     }
   }
-  &__wrap{
+
+  &__wrap {
     margin-top: 15px;
   }
-  
+
 }
 
 

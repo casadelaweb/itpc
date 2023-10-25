@@ -1,5 +1,11 @@
 @import 'src/styles/variables';
 
+@mixin mediaMobile {
+  @media (min-width: 540px) {
+    @content;
+  }
+}
+
 @mixin mediaTablet {
   @media (min-width: 768px) {
     @content;

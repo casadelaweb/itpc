@@ -1,62 +1,68 @@
 @import 'src/styles/shared';
+
 .intro {
+  position: relative;
+  padding: 203px 0;
   background: url('src/assets/img/screen1.png') no-repeat center;
   background-size: cover;
-  padding: 203px 0;
-  position: relative;
-  @include mediaMobile{
+  @include mediaMobile {
     background: url('src/assets/img/screen1-1440.png') no-repeat center;
-    background-size: cover;    
+    background-size: cover;
   }
   @include mediaLaptop {
     padding: 270px 0;
   }
-  &__form{
+
+  &__form {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 30px;
     @include mediaMobile {
       justify-content: space-between;
     }
-    @include mediaTablet{
+    @include mediaTablet {
       justify-content: flex-start;
     }
   }
-  &__input{
-    display: block;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 100%;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.10);    
-    background: rgba(255, 255, 255, 0.06);    
-    backdrop-filter: blur(22px);
-    padding: 19px 29px;
-    color: #ffffff;
+
+  &__input {
     font-size: 16px;
     line-height: 100%;
-    &::placeholder{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    padding: 19px 29px;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(22px);
+
+    &::placeholder {
       color: rgba(255, 255, 255, 0.25);
     }
+
     @include mediaMobile {
       width: 30%;
       margin-bottom: 0;
     }
-    @include mediaTablet{
+    @include mediaTablet {
+      font-size: 18px;
       width: 250px;
       margin-right: 30px;
-      font-size: 18px;
     }
   }
+
   &__submit {
     width: 100%;
     @include mediaMobile {
       width: 30%;
     }
-    @include mediaTablet{
-      width: 234px;
+    @include mediaTablet {
       font-size: 18px;
+      width: 234px;
     }
   }
 }

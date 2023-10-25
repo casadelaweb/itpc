@@ -1,0 +1,88 @@
+@import 'src/styles/shared';
+
+.company {
+  padding: 64px 0;
+  background: url('src/assets/img/screen2.png') no-repeat center;
+  background-size: cover;
+  @include mediaTablet {
+    padding: 221px 0;
+  }
+
+  &__wrap {
+    margin-top: 30px;
+    @include mediaMobile {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @include mediaTablet {
+      margin-top: 50px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
+    padding: 29px 10px 29px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 20px 20px 20px 0px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(22px);
+    @include mediaMobile {
+      width: 30%;
+      margin-bottom: 0;
+    }
+    @include mediaTablet {
+      width: 31.7%;
+      height: 244px;
+      padding: 40px 10px 40px 30px;
+    }
+  }
+
+  &__count {
+    font-size: 56px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    padding-right: 20px;
+    color: #a6a7f7;
+    @include mediaMobile {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__txt {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    color: #ffffff;
+    @include mediaMobile {
+      display: block;
+    }
+
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: center;
+    display: block;
+    width: 106px;
+    margin-top: 20px;
+    padding: 13px 0;
+    @include mediaTablet {
+      font-size: 18px;
+      width: 125px;
+      margin-top: 30px;
+    }
+  }
+}
+
+
+

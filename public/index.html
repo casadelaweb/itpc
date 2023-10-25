@@ -19,7 +19,7 @@
   <header class="header">
     <div class="container">
       <div class="header__wrap">
-        <img src="src/assets/img/logo-header.png" alt="logo" class="header__logo">
+        <img alt="logo" class="header__logo" src="src/assets/img/logo-header.png">
         <div class="header__menu">
           <a href="#">About</a>
           <a href="#">Distributions</a>
@@ -27,8 +27,8 @@
           <a href="#">Industry</a>
           <a href="#">Contacts</a>
         </div>
-        <button type="button" class="btn--outline header__btn">Get Feedback</button>
-        <button type="button" class="burger"></button>
+        <button class="btn--outline header__btn" type="button">Get Feedback</button>
+        <button class="burger" type="button"></button>
       </div>
     </div>
   </header>
@@ -37,9 +37,9 @@
       <div class="container">
         <h1 class="heading">YOUR KEY PARTNER IN CIS IT MARKET</h1>
         <form class="intro__form">
-          <input class="intro__input" type="text" name="name" id="name" placeholder="Your Name" required>
-          <input class="intro__input" type="tel" name="tel" placeholder="+7 (XXX) XXX XX-XX" required>
-          <button type="submit" class="btn--solid intro__submit">Order a Consultation</button>
+          <input class="intro__input" id="name" name="name" placeholder="Your Name" required type="text">
+          <input class="intro__input" name="tel" placeholder="+7 (XXX) XXX XX-XX" required type="tel">
+          <button class="btn--solid intro__submit" type="submit">Order a Consultation</button>
         </form>
       </div>
     </section>
@@ -50,17 +50,17 @@
           <div class="company__item">
             <div class="company__count">01</div>
             <div class="company__txt">Competences</div>
-            <a href="#" class="btn--solid company__link">Learn More</a>
+            <a class="btn--solid company__link" href="#">Learn More</a>
           </div>
           <div class="company__item">
             <div class="company__count">02</div>
             <div class="company__txt">Enterprise Platform</div>
-            <a href="#" class="btn btn--solid company__link">Learn More</a>
+            <a class="btn btn--solid company__link" href="#">Learn More</a>
           </div>
           <div class="company__item">
             <div class="company__count">03</div>
             <div class="company__txt">Sales Channels</div>
-            <a href="#" class="btn btn--solid company__link">Learn More</a>
+            <a class="btn btn--solid company__link" href="#">Learn More</a>
           </div>
         </div>
       </div>
@@ -120,6 +120,60 @@
                 <div class="facts__txt">Private labels share</div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="robotics">
+      <div class="robotics-container">
+        <h2 class="robotics-title">MOBILE <br> ROBOTICS</h2>
+        <div class="robotics-description">
+          Grand IT takes the leading position in the mobile robots market
+        </div>
+        <div class="robotics-advantages">
+          <div class="robotics-advantage">
+            <div class="robotics-advantage-title">5</div>
+            <div class="robotics-advantage-description">suppliers</div>
+          </div>
+          <div class="robotics-advantage">
+            <div class="robotics-advantage-title">19</div>
+            <div class="robotics-advantage-description">solutions</div>
+          </div>
+        </div>
+        <div class="swiper robotics-navigation" data-slider="robotics-navigation">
+          <div class="swiper-wrapper">
+            <div class="robotics-navigation-button swiper-slide">Unitree</div>
+            <div class="robotics-navigation-button swiper-slide">Deep Robotics</div>
+            <div class="robotics-navigation-button swiper-slide">Agile-X</div>
+          </div>
+        </div>
+        <div class="swiper robotics-products" data-slider="robotics-products">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide robotics-product">
+              <h3 class="robotics-product-title">Unitree</h3>
+              <div class="robotics-product-description">
+                Wheeled and tracked robots, robotsdeliverers, bionic robot-dogs
+                for wide range of tasks
+              </div>
+              <img alt="img" class="robotics-product-img" loading="lazy" src="src/assets/img/robotics/unitree.jpg">
+            </article>
+            <article class="swiper-slide robotics-product">
+              <h3 class="robotics-product-title">Deep Robotics</h3>
+              <div class="robotics-product-description">
+                Wheeled and tracked robots, robotsdeliverers, bionic robot-dogs
+                for wide range of tasks
+              </div>
+              <img alt="img" class="robotics-product-img" loading="lazy"
+                   src="src/assets/img/robotics/deep-robotics.jpg">
+            </article>
+            <article class="swiper-slide robotics-product">
+              <h3 class="robotics-product-title">Agile-X</h3>
+              <div class="robotics-product-description">
+                Wheeled and tracked robots, robotsdeliverers, bionic robot-dogs
+                for wide range of tasks
+              </div>
+              <img alt="img" class="robotics-product-img" loading="lazy" src="src/assets/img/robotics/agile-x.jpg">
+            </article>
           </div>
         </div>
       </div>
