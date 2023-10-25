@@ -19,7 +19,7 @@
   <header class="header">
     <div class="container">
       <div class="header__wrap">
-        <img alt="logo" class="header__logo" src="src/assets/img/logo-header.png">
+        <img alt="logo" class="header__logo" loading="lazy" src="src/assets/img/logo-header.png">
         <div class="header__menu">
           <a href="#">About</a>
           <a href="#">Distributions</a>
@@ -27,8 +27,10 @@
           <a href="#">Industry</a>
           <a href="#">Contacts</a>
         </div>
-        <button class="btn--outline header__btn" type="button">Get Feedback</button>
-        <button class="burger" type="button"></button>
+        <button class="btn--outline header__btn" title="Get Feedback" type="button">
+          <span>Get Feedback</span>
+        </button>
+        <button class="burger" title="Toggle Menu" type="button"></button>
       </div>
     </div>
   </header>
@@ -37,9 +39,16 @@
       <div class="container">
         <h1 class="heading">YOUR KEY PARTNER IN CIS IT MARKET</h1>
         <form class="intro__form">
-          <input class="intro__input" id="name" name="name" placeholder="Your Name" required type="text">
-          <input class="intro__input" name="tel" placeholder="+7 (XXX) XXX XX-XX" required type="tel">
-          <button class="btn--solid intro__submit" type="submit">Order a Consultation</button>
+          <label>
+            <input autocomplete="off" class="intro__input" name="name" placeholder="Your Name" required type="text">
+          </label>
+          <label>
+            <input autocomplete="off" class="intro__input" data-mask="tel" name="tel" placeholder="+7 (XXX) XXX XX-XX"
+                   required type="tel">
+          </label>
+          <button class="btn--solid intro__submit" title="Order a Consultation" type="submit">
+            <span>Order a Consultation</span>
+          </button>
         </form>
       </div>
     </section>
