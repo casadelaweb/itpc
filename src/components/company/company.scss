@@ -1,10 +1,81 @@
 @import 'src/styles/shared';
 .company {
-    background-image: url('src/assets/img/bg2.png');
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url('src/assets/img/screen2.png') no-repeat center;
     background-size: cover;
-    padding: 221px 0;
+    padding: 64px 0;
+    @include mediaTablet {
+        padding: 221px 0;
+    }
+    &__wrap{
+        margin-top: 30px;
+        @include mediaMobile {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        @include mediaTablet {
+            margin-top: 50px;
+        }
+    }
+    &__item{
+        border-radius: 20px 20px 20px 0px;
+        border: 1px solid rgba(255, 255, 255, 0.10);        
+        background: rgba(255, 255, 255, 0.06);        
+        backdrop-filter: blur(22px);
+        padding: 29px 10px 29px 30px;
+        margin-bottom: 15px;
+        @include mediaMobile {
+            width: 30%;
+            margin-bottom: 0;
+        }
+        @include mediaTablet {
+            width: 31.7%;
+            height: 244px;
+            padding: 40px 10px 40px 30px;
+        }
+    }
+    &__count{
+        display: inline-block;
+        vertical-align: middle;
+        color: #A6A7F7;        
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        padding-right: 20px;
+        @include mediaMobile{
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+    &__txt{
+        display: inline-block;
+        vertical-align: middle;
+        color: #FFF;        
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 100%;
+        @include mediaMobile {
+            display: block;
+        }
+        
+    }
+    &__link{
+        display: block;
+        text-align: center;
+        width: 106px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 100%;
+        padding: 13px 0;
+        margin-top: 20px;
+        @include mediaTablet {
+            margin-top: 30px;
+            width: 125px;
+            font-size: 18px;
+        }
+    }
 }
 
 

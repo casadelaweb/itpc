@@ -4,44 +4,66 @@
     z-index: 1;
 }
 .heading{
-    font-size: 80px;
+    font-size: 42px;
     font-weight: 700;
     line-height: 100%;
+    @include mediaTablet {
+        font-size: 80px;
+        max-width: 730px;
+    }
 }
 .title{
-    font-size: 64px;
+    font-size: 42px;
     font-weight: 700;
     line-height: 100%;
+    @include mediaTablet {
+        font-size: 64px;
+    }
 }
-.btn{
+.btn--outline{
     display: inline-flex;
     align-items: center;
-    justify-content: center;    
-    font-size: 18px;
+    justify-content: center;
+    font-size: 16px;
     line-height: 100%;
     transition: 0.3s ease;
     border: 2px solid #7542DD;
-    padding: 13px 18px;
-}
-.btn--outline{
     padding: 19px 29px;
+    border-radius: 10px;
     &:hover {
         background: #7542DD;
     }
 }
 .btn--solid {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 100%;
+    transition: 0.3s ease;
+    border: 2px solid #7542DD;
     border-radius: 20px;
     background: #7542DD;
-    padding: 25px 39px;
+    padding: 25px 0;
     &:hover {
         background: transparent;
+    }
+}
+.burger{
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: url('src/assets/img/burger.svg') no-repeat center;
+    @include mediaMobile {
+        display: none;
     }
 }
 .header {
     position: fixed;
     top: 0;
     left: 0;
-    padding-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 100%;
     z-index: 100;
     &__wrap{
@@ -49,15 +71,16 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        .btn-outline{
-            margin-left: 25px;
-        }
     }
     &__menu{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        margin-left: auto;
+        display: none;
+        @include mediaMobile {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        @include mediaTablet {
+            margin-left: auto;
+        }
         a{
             display: block;
             font-size: 18px;
@@ -66,4 +89,23 @@
             margin-right: 15px;
         }
     }
+    &__logo{
+        display: block;
+        width: 98px;
+        height: 30px;
+    }
+    &__btn{
+        padding: 14px 18px;
+        margin-left: auto;
+        margin-right: 20px;
+        @include mediaMobile {
+            margin: 0;
+        }
+        @include mediaTablet {
+            margin-left: 45px;
+        }
+    }
+}
+.scrolled{
+    background: #03001B;
 }
