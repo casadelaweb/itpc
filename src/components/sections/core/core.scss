@@ -1,0 +1,84 @@
+@import 'src/styles/shared';
+
+.core {
+  padding: 170px 0;
+  background: url('src/assets/img/screen4.png') no-repeat center;
+  background-size: cover;
+  @include mediaTablet{
+    background: url('src/assets/img/screen4-1440.png') no-repeat center;
+    background-size: cover;
+  }
+  @include mediaLaptop {
+    padding: 143px 0;    
+  }
+
+  &__container {
+    overflow-x: auto;
+    margin-top: 30px;
+    margin-right: -20px;
+    @include mediaTablet {
+      margin-right: 0;
+    }
+    @include mediaLaptop {
+      margin-top: 50px;
+    }
+  }
+
+  &__container::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    width: 1200px;
+  }
+  &__item{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 400px;
+    width: 277px;
+    margin-right: 20px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 30px;
+    &:nth-child(1){
+      background: url('src/assets/img/c1.png') no-repeat center;
+      background-size: cover;
+    }
+    &:nth-child(2) {
+      background: url('src/assets/img/c2.png') no-repeat center;
+      background-size: cover;
+    }
+    &:nth-child(3) {
+      background: url('src/assets/img/c3.png') no-repeat center;
+      background-size: cover;
+    }
+    &:nth-child(4) {
+      background: url('src/assets/img/c4.png') no-repeat center;
+      background-size: cover;
+    }
+  }
+  &__heading {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 120%;
+    position: relative;
+    z-index: 1;
+  }
+
+}
+
+
+

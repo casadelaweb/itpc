@@ -4,19 +4,23 @@
   padding: 64px 0;
   background: url('src/assets/img/screen2.png') no-repeat center;
   background-size: cover;
-  @media screen and (min-width: 1024px) {
+  @include mediaTablet{
+    background: url('src/assets/img/screen2-1440.png') no-repeat center;
+    background-size: cover;
+  }
+  @include mediaLaptop {
     padding: 221px 0;
   }
 
   &__wrap {
     margin-top: 30px;
-    @media screen and (min-width: 768px) {
+    @include mediaTablet {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       justify-content: space-between;
     }
-    @media screen and (min-width: 1024px) {
+    @include mediaLaptop {
       margin-top: 50px;
     }
   }
@@ -28,11 +32,11 @@
     border-radius: 20px 20px 20px 0px;
     background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(22px);
-    @media screen and (min-width: 768px) {
+    @include mediaTablet {
       width: 30%;
       margin-bottom: 0;
     }
-    @media screen and (min-width: 1024px) {
+    @include mediaLaptop {
       width: 31.7%;
       height: 244px;
       padding: 40px 10px 40px 30px;
@@ -48,7 +52,7 @@
     display: inline-block;
     padding-right: 20px;
     color: #a6a7f7;
-    @media screen and (min-width: 768px) {
+    @include mediaTablet {
       display: block;
       margin-bottom: 10px;
     }
@@ -61,7 +65,7 @@
     vertical-align: middle;
     display: inline-block;
     color: #ffffff;
-    @media screen and (min-width: 768px) {
+    @include mediaTablet {
       display: block;
     }
 
@@ -76,7 +80,7 @@
     width: 106px;
     margin-top: 20px;
     padding: 13px 0;
-    @media screen and (min-width: 1024px) {
+    @include mediaLaptop {
       font-size: 18px;
       width: 125px;
       margin-top: 30px;
