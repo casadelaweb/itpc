@@ -1,25 +1,19 @@
 @import 'src/styles/variables';
 
-@mixin mediaMobile {
+@mixin mediaTablet {
   @media (min-width: 768px) {
     @content;
   }
 }
 
-@mixin mediaTablet {
+@mixin mediaLaptop {
   @media (min-width: 1024px) {
     @content;
   }
 }
 
-@mixin mediaLaptop {
-  @media (min-width: 1440px) {
-    @content;
-  }
-}
-
 @mixin mediaDesktop {
-  @media (min-width: 1920px) {
+  @media (min-width: 1440px) {
     @content;
   }
 }

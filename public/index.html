@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ru">
-<head itemscope itemtype="http://schema.org/WPHeader">
+<head itemscope itemtype="https://schema.org/WPHeader">
   <meta charset="UTF-8">
   <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
         name="viewport">
@@ -19,7 +19,7 @@
   <header class="header">
     <div class="container">
       <div class="header__wrap">
-        <img src="src/assets/img/logo-header.png" alt="logo" class="header__logo">
+        <img alt="logo" class="header__logo" src="src/assets/img/logo-header.png">
         <div class="header__menu">
           <a href="#">About</a>
           <a href="#">Distributions</a>
@@ -27,7 +27,7 @@
           <a href="#">Industry</a>
           <a href="#">Contacts</a>
         </div>
-        <button type="button" class="btn btn--outline">Get Feedback</button>
+        <button class="btn btn--outline" type="button">Get Feedback</button>
       </div>
     </div>
   </header>
@@ -36,9 +36,9 @@
       <div class="container">
         <h1 class="heading">YOUR KEY PARTNER <br> IN CIS IT MARKET</h1>
         <form class="intro__form">
-          <input class="intro__input" type="text" name="name" id="name" placeholder="Your Name" required>
-          <input class="intro__input" type="tel" name="tel" placeholder="+7 (XXX) XXX XX-XX" required>
-          <button type="submit" class="btn btn--solid">Order a Consultation</button>
+          <input class="intro__input" id="name" name="name" placeholder="Your Name" required type="text">
+          <input class="intro__input" name="tel" placeholder="+7 (XXX) XXX XX-XX" required type="tel">
+          <button class="btn btn--solid" type="submit">Order a Consultation</button>
         </form>
       </div>
     </section>
@@ -49,23 +49,116 @@
           <div class="company__item">
             <div class="company__count">01</div>
             <div class="company__txt">Competences</div>
-            <a href="#" class="btn btn--solid company__link">Learn More</a>
+            <a class="btn btn--solid company__link" href="#">Learn More</a>
           </div>
           <div class="company__item">
             <div class="company__count">02</div>
             <div class="company__txt">Enterprise Platform</div>
-            <a href="#" class="btn btn--solid company__link">Learn More</a>
+            <a class="btn btn--solid company__link" href="#">Learn More</a>
           </div>
           <div class="company__item">
             <div class="company__count">03</div>
             <div class="company__txt">Sales Channels</div>
-            <a href="#" class="btn btn--solid company__link">Learn More</a>
+            <a class="btn btn--solid company__link" href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="robotics">
+      <div class="robotics-container">
+        <h2 class="robotics-title">MOBILE <br> ROBOTICS</h2>
+        <div class="robotics-description">
+          Grand IT takes the leading position in the mobile robots market
+        </div>
+        <div class="robotics-advantages">
+          <div class="robotics-advantage">
+            <div class="robotics-advantage-title">5</div>
+            <div class="robotics-advantage-description">suppliers</div>
+          </div>
+          <div class="robotics-advantage">
+            <div class="robotics-advantage-title">19</div>
+            <div class="robotics-advantage-description">solutions</div>
+          </div>
+        </div>
+        <div class="swiper robotics-navigation" data-slider="robotics-navigation">
+          <div class="swiper-wrapper">
+            <div class="robotics-navigation-button swiper-slide">Unitree</div>
+            <div class="robotics-navigation-button swiper-slide">Deep Robotics</div>
+            <div class="robotics-navigation-button swiper-slide">Agile-X</div>
+          </div>
+        </div>
+        <div class="swiper robotics-products" data-slider="robotics-products">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide robotics-product">
+              <h3 class="robotics-product-title">Unitree</h3>
+              <div class="robotics-product-description">
+                Wheeled and tracked robots, robotsdeliverers, bionic robot-dogs
+                for wide range of tasks
+              </div>
+              <img alt="img" class="robotics-product-img" loading="lazy" src="src/assets/img/robotics/unitree.jpg">
+            </article>
+            <article class="swiper-slide robotics-product">
+              <h3 class="robotics-product-title">Deep Robotics</h3>
+              <div class="robotics-product-description">
+                Wheeled and tracked robots, robotsdeliverers, bionic robot-dogs
+                for wide range of tasks
+              </div>
+              <img alt="img" class="robotics-product-img" loading="lazy"
+                   src="src/assets/img/robotics/deep-robotics.jpg">
+            </article>
+            <article class="swiper-slide robotics-product">
+              <h3 class="robotics-product-title">Agile-X</h3>
+              <div class="robotics-product-description">
+                Wheeled and tracked robots, robotsdeliverers, bionic robot-dogs
+                for wide range of tasks
+              </div>
+              <img alt="img" class="robotics-product-img" loading="lazy" src="src/assets/img/robotics/agile-x.jpg">
+            </article>
           </div>
         </div>
       </div>
     </section>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <picture>
+      <source media="(min-width: 1440px)" srcset="src/assets/img/footer/bg-desktop.jpg" type="image/jpeg">
+      <!--      <source media="(min-width: 1024px)" srcset="src/assets/img/footer/bg-laptop.jpg" type="image/jpeg">-->
+      <source media="(min-width: 540px)" srcset="src/assets/img/footer/bg-tablet.jpg" type="image/jpeg">
+      <img alt="img" class="footer-bg" loading="lazy" src="src/assets/img/footer/bg-mobile.jpg">
+    </picture>
+    <div class="footer-container">
+      <h2 class="footer-title">CONTACTS</h2>
+      <div class="footer-layout">
+        <div class="footer-info">
+          <ul class="footer-list">
+            <li class="footer-item">
+              <img alt="img" class="footer-item-icon" loading="lazy" src="src/assets/img/arrow.svg">
+              <span>«ITPC» LLC.</span>
+            </li>
+            <li class="footer-item">
+              <img alt="img" class="footer-item-icon" loading="lazy" src="src/assets/img/arrow.svg">
+              <span>
+            Republic of Russia, 107031, <br>
+            Bolshaya Dmitrovka street, 18
+          </span>
+            </li>
+            <li class="footer-item">
+              <img alt="img" class="footer-item-icon" loading="lazy" src="src/assets/img/arrow.svg">
+              <a href="tel:+7 (495) 266-69-69" title="+7 (495) 266-69-69">
+                +7 (495) 266-69-69
+              </a>
+            </li>
+          </ul>
+          <a class="footer-logo" href="/">
+            <img alt="img" class="footer-logo-img" loading="lazy" src="src/assets/img/logo-footer.svg">
+          </a>
+        </div>
+        <div class="footer-map">
+          <!-- здесь будет яндекс карта -->
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>
 </body>
 </html>
