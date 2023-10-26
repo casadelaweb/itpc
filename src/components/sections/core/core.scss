@@ -45,6 +45,17 @@
     border-radius: 20px;
     overflow: hidden;
     padding: 30px;
+    &::after{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(3, 0, 27, 0.00) 50%, #03001B 78.3%);
+      z-index: 0;
+      opacity: 0.6;
+    }
     &:nth-child(1){
       background: url('src/assets/img/c1.png') no-repeat center;
       background-size: cover;

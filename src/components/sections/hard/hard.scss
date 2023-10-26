@@ -1,0 +1,93 @@
+@import 'src/styles/shared';
+
+.hard{
+  padding: 260px 0;
+  background: url('src/assets/img/hard/screen8.png') no-repeat center;
+  background-size: cover;
+  @include mediaLaptop {
+    padding-bottom: 74px;
+    padding-top: 110px;
+    background: url('src/assets/img/hard/screen8-1440.png') no-repeat center;
+    background-size: cover;
+  }
+
+  &__container{
+    margin-top: 40px;
+    margin-right: -20px;
+    overflow-x: auto;
+    @include mediaTablet{
+      margin-right: 0;
+    }
+    @include mediaLaptop {
+      margin-top: 50px;
+      width: 100%;
+      max-width: 730px;
+    }
+  }
+  &__container::-webkit-scrollbar {
+    display: none;
+  }
+  &__items{
+    position: relative;
+    display: flex; 
+    min-width: 1870px;
+    @include mediaLaptop {
+      width: 100%;
+      flex-wrap: wrap;
+      min-width: 100px;
+    }
+  }
+  &__item{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 295px;
+    height: 167px;
+    margin-right: 20px;
+    border-radius: 20px 20px 20px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.10);    
+    background: rgba(255, 255, 255, 0.06);    
+    backdrop-filter: blur(22px);
+    padding: 30px 10px 30px 79px;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      top: 30px;
+      left: 30px;
+      width: 24px;
+      height: 50px;
+      background: url('src/assets/img/hard/arr.png') no-repeat center;
+      background-size: contain;
+    }
+    @include mediaLaptop {
+      width: 349px;
+      align-items: center;
+      margin-right: 30px;
+      margin-bottom: 30px;
+      padding-right: 30px;
+      height: auto;
+    }
+    &:nth-child(2n){
+      @include mediaLaptop {
+        margin-right: 0;
+      }
+    }
+  }
+  &__heading{
+    color: #A6A7F7;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 100%;
+    margin-bottom: 10px;
+  }
+  &__txt{
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+
+}
+
+
+

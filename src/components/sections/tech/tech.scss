@@ -1,0 +1,142 @@
+@import 'src/styles/shared';
+
+.tech{
+  padding-top: 83px;
+  padding-bottom: 83px;
+  background: url('src/assets/img/tech/screen7.png') no-repeat center;
+  background-size: cover;
+  @include mediaLaptop {
+    padding-top: 138px;
+    padding-bottom: 73px;
+    background: url('src/assets/img/tech/screen7-1440.png') no-repeat center;
+    background-size: cover;
+  }
+  @include mediaDesktop{
+    padding-bottom: 115px;
+    padding-top: 115px;
+  }
+
+  &__container{
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-right: -20px;
+    overflow-x: auto;
+    @include mediaTablet {
+      margin-right: 0;
+    }
+    @include mediaDesktop {
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 50%;
+    }
+  }
+  &__container::-webkit-scrollbar {
+    display: none;
+  }
+  &__items{
+    position: relative;
+    display: flex; 
+    width: 1188px;
+    @include mediaDesktop {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+   }
+  &__item{
+    border-radius: 20px 20px 20px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.10);    
+    background: rgba(255, 255, 255, 0.06);    
+    backdrop-filter: blur(22px);
+    width: 277px;
+    margin-right: 20px;
+    padding: 30px;
+    @include mediaDesktop {
+      margin-right: 30px;
+      margin-bottom: 30px;
+      padding: 40px 30px;
+    }
+    &:nth-child(2n){
+      @include mediaDesktop{
+        margin-right: 0;
+      }
+    }
+  }
+  &__equip{
+    @include mediaDesktop {
+      width: 43.7%;      
+    }
+  }
+  &__wrapper{
+    @include mediaDesktop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+  }
+  &__heading{
+    color: #A6A7F7;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 100%;
+    margin-bottom: 8px;
+  }
+  &__txt{
+    font-size: 20px;
+    line-height: 100%;
+  }
+  &__info{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 100%;
+    margin-bottom: 20px;
+    @include mediaDesktop{
+      font-size: 42px;
+      margin-bottom: 73px;
+    }
+  }
+  &__features{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    border-radius: 20px 20px 20px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.10);    
+    background: rgba(255, 255, 255, 0.06);    
+    backdrop-filter: blur(22px);
+    &::after{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 50%;
+      width: 1px;
+      height: 100%;
+      background: url('src/assets/img/tech/eq.png') no-repeat center;
+      background-size: contain;
+    }
+  }
+  &__feature{
+    width: 50%;
+    padding: 30px;
+    color: #A6A7F7;    
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 100%;
+    @include mediaDesktop {
+      font-size: 36px;
+    }
+  }
+  &__note{
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 130%;
+    @include mediaDesktop {
+      font-size: 20px;
+      line-height: 120%;
+      margin-top: 43px;
+    }
+  }
+
+}
+
+
+
