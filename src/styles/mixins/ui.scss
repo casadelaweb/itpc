@@ -21,14 +21,14 @@
 @mixin scrollbar {
   @media (any-hover: hover) {
     &::-webkit-scrollbar {
-      width: 10px
+      width: 12px
     }
     &::-webkit-scrollbar-track {
-      background: white;
+      background: #03001b;
     }
     &::-webkit-scrollbar-thumb {
-      background: #505050;
-      border: 3px solid white;
+      background: #8986a1;
+      border: 3px solid #03001b;
     }
   }
 }
