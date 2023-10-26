@@ -2,14 +2,30 @@
   min-width: 0;
 
   &-container {
-    min-width: 0
+    min-width: 0;
   }
 
   &-wrapper {
-    min-width: 0
+    min-width: 0;
   }
 
   &-slide {
-    min-width: 0
+    min-width: 0;
+  }
+
+  &-button {
+    &-prev {
+      cursor: pointer;
+    }
+
+    &-next {
+      cursor: pointer;
+    }
+  }
+
+  &-pagination {
+    &-bullet {
+      cursor: pointer;
+    }
   }
 }

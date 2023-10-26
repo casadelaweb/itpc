@@ -1,24 +1,8 @@
 @use 'src/styles/shared' as *;
-//
-// header {
-//   display: none !important;
-// }
 
 .footer {
-  position: relative;
-  z-index: 0;
+  @include stylesBgContainer;
   padding: 80px 0 120px;
-
-  &-bg {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-position: center;
-    object-fit: cover;
-  }
 
   &-title {
     @include sectionTitle;
@@ -26,12 +10,6 @@
     @include mediaLaptop {
       margin-bottom: 50px;
     }
-  }
-
-  &-container {
-    @include container;
-    position: relative;
-    z-index: 1;
   }
 
   &-layout {

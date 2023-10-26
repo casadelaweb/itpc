@@ -45,3 +45,24 @@
     font-size: 64px;
   }
 }
+
+@mixin stylesBgContainer {
+  position: relative;
+  z-index: 0;
+  &-bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &-container {
+    @include container;
+    position: relative;
+    z-index: 1;
+  }
+}

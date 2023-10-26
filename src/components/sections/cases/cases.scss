@@ -1,1 +1,60 @@
 @use 'src/styles/shared' as *;
+
+.cases {
+  @include stylesBgContainer;
+  padding: 252px 0;
+
+  &-title {
+    @include sectionTitle;
+    margin-bottom: 40px;
+  }
+
+  &-layout {
+    @include flex(center);
+    overflow-x: auto;
+    margin: 0 -20px -20px 0;
+    padding-bottom: 20px;
+    @include mediaTablet {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 20px;
+      row-gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    @include mediaLaptop {
+      column-gap: 30px;
+      row-gap: 30px;
+    }
+  }
+
+  &-case {
+    flex: 0 0 auto;
+    width: 277px;
+    height: 184px;
+    margin-right: 20px;
+    padding: 40px 30px;
+    border: 1px solid rgba(white, 0.1);
+    border-radius: 20px 20px 20px 0;
+    background: rgba(white, 0.1);
+    backdrop-filter: blur(8px);
+    @include mediaTablet {
+      width: auto;
+      margin: 0;
+      // margin: 0 20px 20px 0;
+    }
+
+    &-img {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 20px;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    &-title {
+      font-size: 20px;
+      line-height: 1;
+    }
+  }
+}
