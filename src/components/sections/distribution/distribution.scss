@@ -1,0 +1,102 @@
+@import 'src/styles/shared';
+
+.distribution{
+  padding: 155px 0;
+  background: url('src/assets/img/distribution/screen5.png') no-repeat center;
+  background-size: cover;
+  @include mediaLaptop {
+    padding: 139px 0;
+    background: url('src/assets/img/distribution/screen5-1440.png') no-repeat center;
+    background-size: cover;
+  }
+  &__container{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: -20px;
+    overflow-x: auto;
+    @include mediaTablet {
+      margin-right: 0;
+    }
+    @include mediaLaptop {
+      margin-top: 50px;
+      margin-bottom: 60px;
+    }
+  }
+  &__container::-webkit-scrollbar {
+    display: none;
+  }
+  &__items{
+    position: relative;
+    display: flex;
+    width: 825px;
+    @include mediaLaptop {
+      width: 1200px;
+    }
+  }
+  &__item{
+    border-radius: 20px 20px 20px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.10);    
+    background: rgba(255, 255, 255, 0.06);    
+    backdrop-filter: blur(22px);
+    padding: 30px;
+    margin-right: 20px;
+    @include mediaLaptop {
+      padding: 40px 30px;
+      margin-right: 30px;
+      min-width: 380px;
+    }
+  }
+  &__heading{
+    color: #A6A7F7;    
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 100%;
+    margin-bottom: 10px;
+  }
+  &__txt{
+    font-size: 20px;
+    line-height: 100%;
+  }
+  &__features{
+    @include mediaLaptop {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__feature{
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 28px;
+    font-size: 16px;
+    line-height: 100%;
+    &::after{
+      position: absolute;
+      content: '';
+      top: 1px;
+      left: 0;
+      width: 14px;
+      height: 12px;
+      background: url('src/assets/img/distribution/tick.svg') no-repeat center;
+      background-size: contain;
+      @include mediaLaptop {
+        width: 21px;
+        height: 20px;
+        background-size: contain;
+        top: 0;
+      }
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    @include mediaLaptop {
+      width: 50%;
+      font-size: 20px;    
+      padding-left: 35px;
+      margin-bottom: 25px;
+    }
+    
+  }
+}
+
+
+

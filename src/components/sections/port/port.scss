@@ -1,0 +1,74 @@
+@import 'src/styles/shared';
+
+.port{
+  padding: 264px 0;
+  background: url('src/assets/img/port/screen6.png') no-repeat center;
+  background-size: cover;
+  @include mediaLaptop {
+    padding-top: 138px;
+    padding-bottom: 73px;
+    background: url('src/assets/img/port/screen6-1440.png') no-repeat center;
+    background-size: cover;
+  }
+
+  &__container{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: -20px;
+    overflow-x: auto;
+    @include mediaTablet {
+      margin-right: 0;
+    }
+    @include mediaLaptop {
+      margin-top: 50px;
+    }
+  }
+  &__container::-webkit-scrollbar {
+    display: none;
+  }
+  &__items{
+    position: relative;
+    display: flex; 
+    width: 3580px;
+    @include mediaLaptop {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+  }
+  &__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 120px;
+    margin-right: 20px;
+    border-radius: 20px 20px 20px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.10);    
+    background: rgba(255, 255, 255, 0.06);    
+    backdrop-filter: blur(22px);
+    img{
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+    @include mediaLaptop {
+      margin-right: 25px;
+      margin-bottom: 25px;
+    }
+    @include mediaDesktop {
+      margin-right: 2%;
+    }
+    &:nth-child(6n){
+      @include mediaDesktop {
+        margin-right: 0px;
+      }
+    }
+    
+  }
+
+
+
+}
+
+
+
