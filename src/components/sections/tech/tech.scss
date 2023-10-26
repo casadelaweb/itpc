@@ -1,6 +1,6 @@
-@import 'src/styles/shared';
+@use 'src/styles/shared' as *;
 
-.tech{
+.tech {
   padding-top: 83px;
   padding-bottom: 83px;
   background: url('src/assets/img/tech/screen7.png') no-repeat center;
@@ -11,62 +11,68 @@
     background: url('src/assets/img/tech/screen7-1440.png') no-repeat center;
     background-size: cover;
   }
-  @include mediaDesktop{
-    padding-bottom: 115px;
+  @include mediaDesktop {
     padding-top: 115px;
+    padding-bottom: 115px;
   }
 
-  &__container{
-    margin-top: 40px;
-    margin-bottom: 60px;
-    margin-right: -20px;
+  &__container {
     overflow-x: auto;
+    margin-top: 40px;
+    margin-right: -20px;
+    margin-bottom: 60px;
     @include mediaTablet {
       margin-right: 0;
     }
     @include mediaDesktop {
+      width: 50%;
       margin-top: 0;
       margin-bottom: 0;
-      width: 50%;
     }
   }
+
   &__container::-webkit-scrollbar {
     display: none;
   }
-  &__items{
+
+  &__items {
     position: relative;
-    display: flex; 
+    display: flex;
     width: 1188px;
     @include mediaDesktop {
-      width: 100%;
       flex-wrap: wrap;
+      width: 100%;
     }
-   }
-  &__item{
-    border-radius: 20px 20px 20px 0px;
-    border: 1px solid rgba(255, 255, 255, 0.10);    
-    background: rgba(255, 255, 255, 0.06);    
-    backdrop-filter: blur(22px);
+  }
+
+  &__item {
     width: 277px;
     margin-right: 20px;
     padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 20px 20px 20px 0px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(22px);
     @include mediaDesktop {
       margin-right: 30px;
       margin-bottom: 30px;
       padding: 40px 30px;
     }
-    &:nth-child(2n){
-      @include mediaDesktop{
+
+    &:nth-child(2n) {
+      @include mediaDesktop {
         margin-right: 0;
       }
     }
   }
-  &__equip{
+
+  &__equip {
     @include mediaDesktop {
-      width: 43.7%;      
+      width: 43.7%;
     }
   }
-  &__wrapper{
+
+  &__wrapper {
     @include mediaDesktop {
       display: flex;
       flex-wrap: wrap;
@@ -74,38 +80,43 @@
       margin-top: 50px;
     }
   }
-  &__heading{
-    color: #A6A7F7;
+
+  &__heading {
     font-size: 56px;
     font-weight: 700;
     line-height: 100%;
     margin-bottom: 8px;
+    color: #a6a7f7;
   }
-  &__txt{
+
+  &__txt {
     font-size: 20px;
     line-height: 100%;
   }
-  &__info{
+
+  &__info {
     font-size: 24px;
     font-weight: 700;
     line-height: 100%;
     margin-bottom: 20px;
-    @include mediaDesktop{
+    @include mediaDesktop {
       font-size: 42px;
       margin-bottom: 73px;
     }
   }
-  &__features{
+
+  &__features {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.10);
     border-radius: 20px 20px 20px 0px;
-    border: 1px solid rgba(255, 255, 255, 0.10);    
-    background: rgba(255, 255, 255, 0.06);    
+    background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(22px);
-    &::after{
-      position: absolute;
+
+    &::after {
       content: '';
+      position: absolute;
       top: 0;
       left: 50%;
       width: 1px;
@@ -114,21 +125,23 @@
       background-size: contain;
     }
   }
-  &__feature{
-    width: 50%;
-    padding: 30px;
-    color: #A6A7F7;    
+
+  &__feature {
     font-size: 26px;
     font-weight: 700;
     line-height: 100%;
+    width: 50%;
+    padding: 30px;
+    color: #a6a7f7;
     @include mediaDesktop {
       font-size: 36px;
     }
   }
-  &__note{
-    margin-top: 20px;
+
+  &__note {
     font-size: 14px;
     line-height: 130%;
+    margin-top: 20px;
     @include mediaDesktop {
       font-size: 20px;
       line-height: 120%;

@@ -37,11 +37,7 @@
   font-size: 42px;
   font-weight: 700;
   line-height: 1;
-  @include mediaTablet {
-  }
   @include mediaLaptop {
-  }
-  @include mediaDesktop {
     font-size: 64px;
   }
 }
@@ -110,5 +106,32 @@
     @include mediaDesktop {
       font-size: 20px;
     }
+  }
+}
+
+@mixin addBottomLineOnHover($bg:white) {
+  position: relative;
+  z-index: 0;
+
+  @media (any-hover: hover) {
+    &:hover {
+      &:before {
+        transform: none;
+      }
+    }
+  }
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $bg;
+    transition: transform 0.5s;
+    transform-origin: center left;
+    transform: scale(0);
   }
 }

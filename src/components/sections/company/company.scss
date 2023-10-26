@@ -1,10 +1,10 @@
-@import 'src/styles/shared';
+@use 'src/styles/shared' as *;
 
 .company {
   padding: 64px 0;
   background: url('src/assets/img/screen2.png') no-repeat center;
   background-size: cover;
-  @include mediaTablet{
+  @include mediaTablet {
     background: url('src/assets/img/screen2-1440.png') no-repeat center;
     background-size: cover;
   }

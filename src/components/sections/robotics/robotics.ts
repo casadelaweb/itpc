@@ -4,7 +4,6 @@ import { CSSSelector, SwiperOptions } from 'swiper/types'
 import 'swiper/css'
 import 'swiper/css/a11y'
 import 'swiper/css/thumbs'
-/// import 'swiper/css/lazy'
 import { swiperSettingsDefault } from 'src/scripts/swiperSettingsDefault'
 
 document.addEventListener('DOMContentLoaded', () => {

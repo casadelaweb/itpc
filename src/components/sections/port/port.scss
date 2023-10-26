@@ -1,6 +1,6 @@
-@import 'src/styles/shared';
+@use 'src/styles/shared' as *;
 
-.port{
+.port {
   padding: 264px 0;
   background: url('src/assets/img/port/screen6.png') no-repeat center;
   background-size: cover;
@@ -11,11 +11,11 @@
     background-size: cover;
   }
 
-  &__container{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: -20px;
+  &__container {
     overflow-x: auto;
+    margin-top: 40px;
+    margin-right: -20px;
+    margin-bottom: 40px;
     @include mediaTablet {
       margin-right: 0;
     }
@@ -23,34 +23,39 @@
       margin-top: 50px;
     }
   }
+
   &__container::-webkit-scrollbar {
     display: none;
   }
-  &__items{
+
+  &__items {
     position: relative;
-    display: flex; 
+    display: flex;
     width: 3580px;
     @include mediaLaptop {
-        width: 100%;
-        flex-wrap: wrap;
+      flex-wrap: wrap;
+      width: 100%;
     }
   }
-  &__item{
+
+  &__item {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 180px;
     height: 120px;
     margin-right: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
     border-radius: 20px 20px 20px 0px;
-    border: 1px solid rgba(255, 255, 255, 0.10);    
-    background: rgba(255, 255, 255, 0.06);    
+    background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(22px);
-    img{
+
+    img {
       display: block;
       max-width: 100%;
       max-height: 100%;
     }
+
     @include mediaLaptop {
       margin-right: 25px;
       margin-bottom: 25px;
@@ -58,14 +63,14 @@
     @include mediaDesktop {
       margin-right: 2%;
     }
-    &:nth-child(6n){
+
+    &:nth-child(6n) {
       @include mediaDesktop {
         margin-right: 0px;
       }
     }
-    
-  }
 
+  }
 
 
 }
