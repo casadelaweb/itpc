@@ -1,0 +1,52 @@
+@use 'src/styles/shared' as *;
+
+.locations {
+  @include stylesBgContainer;
+  padding: 106px 0;
+  @include mediaDesktop {
+    padding: 96px 0;
+  }
+
+  &-title {
+    @include sectionTitle;
+    max-width: 524px;
+    margin-bottom: 20px;
+  }
+
+  &-description {
+    @include sectionDescription;
+    max-width: 524px;
+  }
+
+  &-cards {
+    @include flex;
+    margin: 0 -20px 25px 0;
+    @include mediaLaptop {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  &-card {
+    @include card;
+    margin-right: 20px;
+    @include mediaLaptop {
+      margin: 0 0 30px;
+    }
+  }
+
+  &-map {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+    object-position: center;
+    @include mediaLaptop {
+      position: absolute;
+      z-index: 0;
+      top: 80px;
+      right: 0;
+      width: calc(768 / 1200 * 100%);
+    }
+  }
+}

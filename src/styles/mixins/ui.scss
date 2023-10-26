@@ -66,3 +66,49 @@
     z-index: 1;
   }
 }
+
+@mixin sectionDescription {
+  font-size: 14px;
+  line-height: calc(24 / 20);
+  margin-bottom: 20px;
+  @include mediaTablet {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+@mixin card {
+  flex: 0 0 auto;
+  height: 121px;
+  width: 157px;
+  padding: 20px;
+  border: 1px solid rgba(white, 0.1);
+  border-radius: 20px 20px 20px 0;
+  background: #191432;
+  @include mediaLaptop {
+    width: 220px;
+    height: 166px;
+  }
+  @include mediaDesktop {
+    width: 277px;
+  }
+
+  &-title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 5px;
+    color: #a6a7f7;
+    @include mediaDesktop {
+      font-size: 56px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-description {
+    font-size: 14px;
+    @include mediaDesktop {
+      font-size: 20px;
+    }
+  }
+}
