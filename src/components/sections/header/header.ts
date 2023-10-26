@@ -63,4 +63,18 @@ class Header {
 
 document.addEventListener('DOMContentLoaded', () => {
   new Header().init()
+
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.header__menu');
+  const links = document.querySelectorAll('.header__menu a')
+  burger.addEventListener('click', () => {
+    menu.classList.toggle('active')
+    this.classList.toggle('active')
+  })
+  function linkAction(){
+    menu.classList.remove('active')
+    this.classList.remove('active')
+  }
+  links.forEach(n => n.addEventListener('click', linkAction))
+
 })
